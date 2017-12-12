@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom';
+import Home from './Home/Home';
+import About from './About/About';
+import People from './People/People';
 
 class App extends Component {
   render() {
@@ -7,15 +10,13 @@ class App extends Component {
       <div>
         This is App.js
         <div>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/people">People</Link>
-          <Link to="/contact">Contact</Link>
         </div>
-        <Route exact path="/home" render={ () => <div>Home</div> } />
-        <Route path="/about" render={ () => <div>About</div> } />
-        <Route path="/people" render={ () => <div>People</div> } />
-        <Route path="/contact" render={ () => <div>Contact</div> } />
+        <Route exact path="/" component={ Home } />
+        <Route path="/about" component={ About } />
+        <Route path="/people" component={ People } />
       </div>
     );
   }

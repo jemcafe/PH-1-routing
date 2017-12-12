@@ -20,7 +20,7 @@ class App extends Component {
         <Route path="/about" render={ () => (
           <About>
             <Route path="/about/company" component={ Company }/>
-            <Route path="/about/FAQ" component={ FAQ }/>
+            <Route path="/about/faq" component={ FAQ }/>
           </About>
          ) } />
         <Route path="/people" component={ People } />

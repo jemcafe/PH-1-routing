@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div>
         This is App.js
+        <div>
+          <Link to="/home">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/people">People</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
         <Route exact path="/home" render={ () => <div>Home</div> } />
         <Route path="/about" render={ () => <div>About</div> } />
         <Route path="/people" render={ () => <div>People</div> } />
